@@ -342,7 +342,10 @@ Sends an AJAX request, using the following parameters:
 - ``method``: The HTTP method (default: ``GET``).
 - ``data``: Request parameters (default: ``null``).
 - ``async``: Flag for an asynchroneous request? (default: ``false``)
-- ``settings``: Other settings when perform the AJAX request (default: ``null``)
+- ``settings``: Other settings when perform the AJAX request (default: ``null``) :
+    - ``Object setRequestHeader``: Will override headers of the request (defaults: ``null``)
+    - ``String overrideMimeType``: Will override mime type (defaults: ``null``)
+    - ``String contentType``: Will set a new contentType (defaults: ``application/x-www-form-urlencoded``)
 
 .. warning::
 
