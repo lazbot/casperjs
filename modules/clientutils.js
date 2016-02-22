@@ -796,6 +796,11 @@
                 }
                 xhr.setRequestHeader("Content-Type", contentType);
             }
+            if (settings && typeof settings.setRequestHeader === "object") {
+                for (var i in settings.setRequestHeader) {
+                    xhr.setRequestHeader(i, settings.setRequestHeader[i]);
+                }
+            }
             xhr.send(method === "POST" ? dataString : null);
             return xhr.responseText;
         };
